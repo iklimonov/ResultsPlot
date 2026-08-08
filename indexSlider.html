@@ -1,0 +1,135 @@
+﻿<html lang="ru">
+
+<head>
+    <title>Просмотр результатов расчёта BN1200</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="Gui/bootstrap-4.4.1/css/bootstrap.min.css">
+
+
+    <script src="Gui\angular-1.7.9/angular.min.js"></script>
+    <script src="Gui\angular-1.7.9/angular-route.js"></script>
+
+
+    <script src="PlotResults\CalculationParameters.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\CORE.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\BERKUT.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\DN3D.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\SAFR.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\SAFR_CF.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\FIRSTLOOP.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\SECLOOP.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\THIRDLOOP.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\SAOT.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\COMBINED.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\REACTORSIGNALS.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\COMMONFILES.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\BERKUT_N.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\AEROSOL.js" type="text/javascript" charset="UTF-8"></script>
+
+    <script src="Gui/js/Modules.js" type="text/javascript" charset="UTF-8"></script>
+
+    <link rel="stylesheet" href="Gui/myStyles.css">
+
+    <link rel="stylesheet" href="Gui\w3schools.css">
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body ng-app="myApp" ng-controller="mainCtrl">
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-3 navbar-container bg-light">
+
+                <!---------------------->
+                <div id="accordion">
+                    <div class="card w-100" ng-repeat="myMod in allModules">
+                        <div class="card-header" id="{{'heading'+($index+1)}}">
+                            <h5 class="mb-0">
+
+                                <a href="" class="btn btn-primary btn-lg active dropdown-toggle w-100" role="button" aria-pressed="true" data-toggle="collapse" data-target="{{'#collapse'+($index+1)}}" aria-expanded="true" aria-controls="{{'#collapse'+($index+1)}}">{{myMod.title}}</a>
+                            </h5>
+                        </div>
+
+                        <div id="{{'collapse'+($index+1)}}" class="collapse hide" aria-labelledby="{{'heading'+($index+1)}}" data-parent="#accordion">
+                            <div class="card-body w-100">
+                                <nav class="navbar navbar-expand-md navbar-light">
+                                    <a class="navbar-brand w-100" href="#!{{myMod.name}}">Все результаты<hr class="mb-0"></a>
+
+                                    <hr class="mb-1">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                                            aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse w-100" id="navbar">
+                                        <!-- Вертикальное меню -->
+                                        <ul class="navbar-nav w-100">
+                                            <li class="nav-item list-group" ng-repeat="subg in myMod.subgroups">
+                                                <a class="list-group-item list-group-item-action list-group-item-primary " href="#!{{myMod.name}}/{{subg.name}}">{{subg.title}}</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------------->
+
+
+
+            </div>
+
+            <div ng-view class="col-md-8 col-lg-9 content-container  text-center" style="background-color: #ffe0b2"></div>
+
+        </div>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="Gui/jquery-3.4.1/jquery-3.4.1.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="Gui/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+    <script src="Gui/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="Gui/js/myAppTemplates.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="Gui/js/myApp.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="Gui/js/myAppControllers.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="Gui/js/myAppRoutersSlider.js" type="text/javascript" charset="UTF-8"></script>
+    <script>
+        slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>							

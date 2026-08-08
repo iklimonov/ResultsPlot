@@ -1,0 +1,256 @@
+[
+  {
+    "Name": "GPR_KO",
+    "Title": "ГПР и КО",
+    "Channels": [
+      {
+        "Name": "CH_GPR_1",
+        "CellsNumber": 28
+      },
+      {
+        "Name": "CH_GPR_2",
+        "CellsNumber": 2
+      },
+      {
+        "Name": "CH_GPR_3",
+        "CellsNumber": 9
+      },
+      {
+        "Name": "CH_GPR_Leakage",
+        "CellsNumber": 2
+      },
+      {
+        "Name": "CH_GPR_BRIDGE",
+        "CellsNumber": 8
+      },
+      {
+        "Name": "CH_PERELIV",
+        "CellsNumber": 120
+      },
+      {
+        "Name": "CH_KO",
+        "CellsNumber": 65
+      },
+      {
+        "Name": "CH_KO_BOT",
+        "CellsNumber": 6
+      },
+      {
+        "Name": "CH_GAZ",
+        "CellsNumber": 42
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "VOL_GPR_1"
+      },
+      {
+        "Name": "VOL_GPR_2"
+      },
+      {
+        "Name": "VOL_KO_DOWN"
+      },
+      {
+        "Name": "VOL_KO_UP"
+      }
+
+    ]
+  },
+  {
+    "Name": "GPR",
+    "Title": "Газовая полость реактора",
+    "Channels": [
+      {
+        "Name": "CH_GPR_1",
+        "CellsNumber": 28
+      },
+      {
+        "Name": "CH_GPR_2",
+        "CellsNumber": 2
+      },
+      {
+        "Name": "CH_GPR_3",
+        "CellsNumber": 9
+      },
+      {
+        "Name": "CH_GPR_BRIDGE",
+        "CellsNumber": 8
+      },
+      {
+        "Name": "CH_GPR_Leakage",
+        "CellsNumber": 2
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "VOL_GPR_1"
+      },
+      {
+        "Name": "VOL_GPR_2"
+      }
+
+    ]
+  },
+  {
+    "Name": "KO",
+    "Title": "Компенсирующий объём",
+    "Channels": [
+      {
+        "Name": "CH_PERELIV",
+        "CellsNumber": 120
+      },
+      {
+        "Name": "CH_KO",
+        "CellsNumber": 65
+      },
+      {
+        "Name": "CH_KO_BOT",
+        "CellsNumber": 6
+      },
+      {
+        "Name": "CH_GAZ",
+        "CellsNumber": 42
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "VOL_KO_DOWN"
+      },
+      {
+        "Name": "VOL_KO_UP"
+      }
+    ]
+  },
+  {
+    "Name": "Compensator",
+    "Title": "Помещение сосуда компенсатора",
+    "Channels": [
+      {
+        "Name": "CH_PSK_Room_VentOut",
+        "CellsNumber": 30
+      },
+      {
+        "Name": "QCH_PSK_Room_Leaks",
+        "CellsNumber": 5
+      },
+      {
+        "Name": "CH_PSK_RecirculationIn",
+        "CellsNumber": 10
+      },
+      {
+        "Name": "CH_PSK_RecirculationOut",
+        "CellsNumber": 10
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "Vol_PSK_Room"
+      },
+      {
+        "Name": "Vol_PSK_Recirculation"
+      }
+    ]
+  },
+  {
+    "Name": "VentTube",
+    "Title": "Вентиляционная труба",
+    "Channels": [
+      {
+        "Name": "Channel_VentTube",
+        "CellsNumber": 20
+      },
+      {
+        "Name": "VentTube_OtherVentilationInlets",
+        "CellsNumber": 2
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "Chamber_VentTube_BaseConnector"
+      }
+    ]
+  },
+  {
+    "Name": "Compensator_VentTube",
+    "Title": "ПКС и Вентиляционная труба",
+    "Channels": [
+      {
+        "Name": "CH_PSK_Room_VentOut",
+        "CellsNumber": 30
+      },
+      {
+        "Name": "QCH_PSK_Room_Leaks",
+        "CellsNumber": 5
+      },
+      {
+        "Name": "CH_PSK_RecirculationIn",
+        "CellsNumber": 10
+      },
+      {
+        "Name": "CH_PSK_RecirculationOut",
+        "CellsNumber": 10
+      },
+      {
+        "Name": "Channel_VentTube",
+        "CellsNumber": 20
+      },
+      {
+        "Name": "VentTube_OtherVentilationInlets",
+        "CellsNumber": 2
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "Vol_PSK_Room"
+      },
+      {
+        "Name": "Vol_PSK_Recirculation"
+      },
+      {
+        "Name": "Chamber_VentTube_BaseConnector"
+      }
+    ]
+  },
+  {
+    "Name": "GPR_Discharge",
+    "Title": "Сдув газа из ГПР",
+    "Channels": [
+
+    ],
+    "Chambers": [
+      {
+        "Name": "VOL_GPR_SLIV"
+      }
+    ]
+  },
+  {
+    "Name": "SupraReactorRoom",
+    "Title": "Надреакторное помещение",
+    "Channels": [
+      {
+        "Name": "QCH_SuprareactorRoom_OUT",
+        "CellsNumber": 5
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "Vol_SuprareactorRoom"
+      }
+    ]
+  },
+  {
+    "Name": "CentralHall",
+    "Title": "Центральный зал",
+    "Channels": [
+      {
+        "Name": "QCH_CentralHall_OUT",
+        "CellsNumber": 5
+      }
+    ],
+    "Chambers": [
+      {
+        "Name": "Vol_CentralHall"
+      }
+    ]
+  }
+]

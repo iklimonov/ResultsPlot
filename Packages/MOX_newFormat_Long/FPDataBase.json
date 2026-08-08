@@ -1,0 +1,106 @@
+[
+  {
+    "Name": "Xe",
+    "DecayConstant": 0.0,
+    "MolarMass": 0.038964313231,
+	"OperationalLimit": 0.0,
+    "Type" : "Vap",
+	"PlotGroup": "Stable"
+  },
+  {
+    "Name": "Kr",
+    "DecayConstant": 0.0,
+	"MolarMass": 0.038964313231,
+	"OperationalLimit": 0.0,
+    "Type" : "Vap",
+	"PlotGroup": "Stable"
+  },
+  {
+    "Name": "Na22",
+    "DecayConstant": 8.444904487527870E-09,
+    "MolarMass": 0.021994436425,
+	"OperationalLimit": 0.0,
+    "Type": "Vap, Aer, Dep",
+	"PlotGroup": "Aerosols"
+  },
+  {
+    "Name": "Na24",
+    "DecayConstant": 1.283862662458320E-05,
+    "MolarMass": 0.023990962782,
+	"OperationalLimit": 0.0,
+    "Type": "Vap, Aer, Dep",
+	"PlotGroup": "Aerosols"
+  },
+  {
+    "Name": "Cs134",
+    "DecayConstant": 1.06593370076085E-08,
+    "MolarMass": 0.1339,
+	"OperationalLimit": 9.0e+8,
+    "Type": "Vap, Aer, Dep",
+	"PlotGroup": "Aerosols"
+  },
+  {
+    "Name": "Cs137",
+    "DecayConstant": 7.28523464026807E-10,
+    "MolarMass": 0.1369,
+	"OperationalLimit": 2.0e+9,
+    "Type": "Vap, Aer, Dep",
+	"PlotGroup": "Aerosols"
+  },
+  {
+    "Name": "NaI131",
+    "DecayConstant": 9.97827961696070E-07,
+    "MolarMass": 0.153895894,
+	"OperationalLimit": 1.8e+10,
+    "Type": "Vap, Aer, Dep",
+	"PlotGroup": "Aerosols"
+  },
+  {
+    "Name": "Kr85m",
+    "DecayConstant": 4.29778757787664E-05,
+    "MolarMass": 0.0849,
+	"OperationalLimit": 6.9e+14,
+    "Type" : "Vap",
+	"PlotGroup": "Kr"
+  },
+  {
+    "Name": "Kr85",
+    "DecayConstant": 2.04842058804182E-09,
+    "MolarMass": 0.0849,
+	"OperationalLimit": 6.9e+14,
+    "Type" : "Vap",
+	"PlotGroup": "Kr"
+  },
+  {
+    "Name": "Kr87",
+    "DecayConstant": 1.51606994873129E-04,
+    "MolarMass": 0.0869,
+	"OperationalLimit": 6.9e+14,
+    "Type" : "Vap",
+	"PlotGroup": "Kr"
+  },
+  {
+    "Name": "Kr88",
+    "DecayConstant": 6.77960857355189E-05,
+    "MolarMass": 0.0879,
+	"OperationalLimit": 2.92e+14,
+    "Type" : "Vap",
+	"PlotGroup": "Kr"
+  },
+  {
+    "Name": "Xe133",
+    "DecayConstant": 1.53014243983147E-06,
+    "MolarMass": 0.1329,
+	"OperationalLimit": 6.9e+14,
+    "Type" : "Vap",
+	"PlotGroup": "Xe"
+  },
+  {
+    "Name": "Xe135",
+    "DecayConstant": 2.11583388449312E-05,
+    "MolarMass":  0.1349,
+	"OperationalLimit": 6.9e+14,
+    "Type" : "Vap",
+	"PlotGroup": "Xe"
+  }
+]

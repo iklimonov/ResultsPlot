@@ -1,0 +1,514 @@
+{
+  "module": "SAFR",
+  "title": "Модуль разрушения",
+  "materials": [
+    {
+      "name": "UPN",
+      "type": "fuel",
+      "colorSolid": "green",
+      "colorLiquid": "pink"
+    },
+    {
+      "name": "UN",
+      "type": "fuel",
+      "colorSolid": "DarkGreen",
+      "colorLiquid": "PaleGoldenRod"
+    },
+    {
+      "name": "EK164",
+      "type": "structure",
+      "colorSolid": "silver",
+      "colorLiquid": "red"
+    },
+    {
+      "name": "He",
+      "type": "gas",
+      "colorSolid": "white",
+      "colorLiquid": "white"
+    },
+    {
+      "name": "Uranium",
+      "type": "fuel",
+      "colorSolid": "Brown",
+      "colorLiquid": "MediumVioletRed"
+    },
+    {
+      "name": "Pu",
+      "type": "fuel",
+      "colorSolid": "Salmon",
+      "colorLiquid": "FireBrick"
+    }
+  ],
+  "haveTvel": "Yes",
+  "parametersTvel": {
+    "PixelSizeAxial": 1300,
+    "PixelSizeRadial": 400,
+    "Length": 2.33498,
+    "innerRadius": 0.0,
+    "externalRadius": 0.0046,
+    "PixelFreeSpaceAxial": 0,
+    "PixelFreeSpaceRadial": 100
+  },
+  "haveCanister": "No",
+  "canisterName": "Canist",
+  "parametersCanister": {
+    "PixelSizeAxial": 900,
+    "PixelSizeRadial": 400,
+    "Length": 4.7,
+    "innerRadius": 0.0,
+    "externalRadius": 0.1,
+    "PixelFreeSpaceAxial": 0,
+    "PixelFreeSpaceRadial": 200
+  },
+  "haveDissociation": "Yes",
+  "data": [
+    {
+      "dataType": "map",
+      "name": "LiquidMap",
+      "graphParameters": {
+        "title": "Распределение расплава в зоне "
+      }
+    },
+    {
+      "dataType": "map",
+      "name": "TemperatureMap",
+      "graphParameters": {
+        "title": "Распределение температуры в зоне "
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "LiquidMass",
+      "graphParameters": {
+        "title": "Масса расплава в твэле от времени. Зона "
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "SolidMass",
+      "graphParameters": {
+        "title": "Масса материала в твёрдой фазе в твэле от времени. Зона "
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "TotalMass",
+      "graphParameters": {
+        "title": "Масса материала в твэле от времени. Зона "
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "MaxTemperature",
+      "graphParameters": {
+        "title": "Максимальная температура топлива в твэле от времени. Зона "
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "FullLiquidMassCore",
+      "graphParameters": {
+        "title": "Масса расплава в а.з. от времени."
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "FullSolidMassCore",
+      "graphParameters": {
+        "title": "Масса материала в твёрдой фазе в а.з. от времени."
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "FullMassCore",
+      "graphParameters": {
+        "title": "Масса материала в в а.з. от времени."
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "FullDissociationMass",
+      "graphParameters": {
+        "title": "Изменение массы материалов при диссоциации"
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "DissociationMassUPuN",
+      "graphParameters": {
+        "title": "Диссоциации.СНУП топливо"
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "DissociationMassDinitrogen",
+      "graphParameters": {
+        "title": "Диссоциации. Динитроген"
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "DissociationMassPlutonium",
+      "graphParameters": {
+        "title": "Диссоциации. Плутоний"
+      }
+    },
+    {
+      "dataType": "time",
+      "name": "DissociationMassUranium",
+      "graphParameters": {
+        "title": "Диссоциации. Уран"
+      }
+    }
+  ],
+  "liquidMap": {
+    "dataType": "map",
+    "name": "LiquidMap",
+    "title": "Карта расплава",
+    "graphParameters": {
+      "title": "Распределение расплава"
+    }
+  },
+  "temperatureMap": {
+    "dataType": "map",
+    "name": "TemperatureMap",
+    "title": "Карта температур",
+    "graphParameters": {
+      "title": "Распределение температуры"
+    }
+  },
+  "liquidMass": {
+    "dataType": "time",
+    "title": "Масса расплава",
+    "name": "LiquidMass",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса расплава от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "solidMass": {
+    "dataType": "time",
+    "title": "Масса материала в твёрдой фазе",
+    "name": "SolidMass",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса материала в твёрдой фазе от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "totalMass": {
+    "dataType": "time",
+    "title": "Масса материала",
+    "name": "TotalMass",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса материала от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "maxTemperature": {
+    "dataType": "time",
+    "name": "MaxTemperature",
+    "title": "Температура материалов",
+    "HeaderLines": 7,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 4000,
+      "xLabel": "Время, с",
+      "yLabel": "Температура, °C",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Максимальная температура от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 200,
+      "yMinorTicks": 50,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": -273.15
+    }
+  },
+  "fullLiquidMassCore": {
+    "dataType": "time",
+    "title": "Масса расплава в активной зоне",
+    "name": "FullLiquidMassCore",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, т",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса расплава в а.з. от времени ",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 0.001,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "fullSolidMassCore": {
+    "dataType": "time",
+    "title": "Масса материала в твёрдой фазе в активной зоне",
+    "name": "FullSolidMassCore",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса материала в твёрдой фазе в а.з. от времени ",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1.0,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "fullMassCore": {
+    "dataType": "time",
+    "title": "Масса материала в активной зоне",
+    "name": "FullMassCore",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса материала в а.з. от времени ",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1.0,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "DissociationMassUPuN": {
+    "dataType": "time",
+    "title": "Диссоциации.СНУП топливо",
+    "name": "DissociationMassUPuN",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "criteriaForAxSciFormat": 0.001,
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "DissociationMassUranium": {
+    "dataType": "time",
+    "title": "Диссоциации. Уран",
+    "name": "DissociationMassUranium",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "criteriaForAxSciFormat": 0.001,
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "DissociationMassPlutonium": {
+    "dataType": "time",
+    "title": "Диссоциации. Плутоний",
+    "name": "DissociationMassPlutonium",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "criteriaForAxSciFormat": 0.001,
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  },
+  "DissociationMassDinitrogen": {
+    "dataType": "time",
+    "title": "Диссоциации. Динитроген",
+    "name": "DissociationMassDinitrogen",
+    "HeaderLines": 2,
+    "graphParameters": {
+      "userGridX": "No",
+      "userGridY": "No",
+      "axSciFormat": "No",
+      "aySciFormat": "No",
+      "criteriaForAxSciFormat": 0.001,
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
+      "yMin": 0,
+      "yMax": 400,
+      "xLabel": "Время, с",
+      "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
+      "legendPosition": "upper right",
+      "title": "Масса от времени",
+      "xMajorTicks": 50,
+      "xMinorTicks": 10,
+      "yMajorTicks": 100,
+      "yMinorTicks": 10,
+      "xMultiplicator": 1,
+      "yMultiplicator": 1,
+      "xAddendum": 0,
+      "yAddendum": 0
+    }
+  }
+}

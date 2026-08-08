@@ -1,0 +1,149 @@
+{
+  "reactor": "БН 1200М",
+  "fuelType": "MOX",
+  "accident": "LOF_1159_v2",
+  "folderWithPlotParameters": "MOX_newFormat_Long",
+  "inputCoreZones": "inputCoreZones",
+  "InputFileName": "BN1200M_LOF1159_v2_LongPBN_CorePAZT",
+  "stadyStateDuration": 10000.0,
+  "endTime": 370000.0,
+  "limitCalculationTime": "On",
+  "limitSpaceCalculationTime": "Off",
+  "printDataToFile": "On",
+
+  "ModulesData": {
+    "CORE": {
+      "jsonFile": "ModulesParameters_CORE",
+      "dataProcessing": "Off",
+      "linesPerFigure": 5,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 1000.0
+    },
+    "BERKUT": {
+      "jsonFile": "ModulesParameters_BERKUT",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 1000.0
+    },
+    "SAFR": {
+      "jsonFile": "ModulesParameters_SAFR",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 1.0
+    },
+    "SAFR_CF": {
+      "jsonFile": "ModulesParameters_SAFR_CF",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 5.0
+    },
+    "DN3D": {
+      "jsonFile": "ModulesParameters_DN3D",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "BERKUT_N": {
+      "jsonFile": "BERKUT_NoutputFiles",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "AEROSOL": {
+      "jsonFile": "ModulesParameters_AEROSOL",
+      "jsonFileFPDataBase": "FPDataBase",
+      "jsonFileFPControlVolumes": "FPControlVolumes",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    }
+  },
+
+  "ControlGroupData": {
+    "FIRSTLOOP": {
+      "jsonFile": "ControlGroupParameters_FIRSTLOOP",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "PIT": {
+      "jsonFile": "ControlGroupParameters_PIT",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "GPRKO": {
+      "jsonFile": "ControlGroupParameters_GPRKO",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "PSK": {
+      "jsonFile": "ControlGroupParameters_PSK",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "PGBOX": {
+      "jsonFile": "ControlGroupParameters_PGBOX",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "SECLOOP": {
+      "jsonFile": "ControlGroupParameters_SECLOOP",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "THIRDLOOP": {
+      "jsonFile": "ControlGroupParameters_THIRDLOOP",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "SAOT": {
+      "jsonFile": "ControlGroupParameters_SAOT",
+      "dataProcessing": "On",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "REACTORSIGNALS": {
+      "jsonFile": "ControlGroupParameters_REACTORSIGNALS",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    },
+    "COMMONFILES": {
+      "jsonFile": "ControlGroupParameters_COMMONFILES",
+      "dataProcessing": "Off",
+      "linesPerFigure": 6,
+      "DtPlotTime": "Auto",
+      "DtPlotSpace": 10.0
+    }
+  },
+
+  "COMBINED": {
+    "jsonFile": "COMBINED_GroupParameters",
+    "dataProcessing": "On",
+    "linesPerFigure": 6,
+    "DtPlotTime": "Auto",
+    "DtPlotSpace": 10.0
+  }
+}
+
