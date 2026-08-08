@@ -1,20 +1,4 @@
 {
-  "defaultGraphParameters": {
-    "legendPosition": "best",
-    "userGridY": "No",
-    "xMultiplicator": 1,
-    "xMax": 100,
-    "xMajorTicks": 5000,
-    "axSciFormat": "No",
-    "xLabel": "Время, с",
-    "xMinorTicks": 1000,
-    "userGridX": "No",
-    "legend": "EUCLID/V2",
-    "yMultiplicator": 1,
-    "xAddendum": 0,
-    "yAddendum": 0,
-    "xMin": 0
-  },
   "module": "DN3D",
   "title": "Нейтронный модуль",
   "data": [
@@ -24,14 +8,28 @@
       "title": "Мощность",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "No",
         "RelativeToStadyState": "Yes",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": 0,
         "yMax": 5.0,
+        "xLabel": "Время, с",
         "yLabel": "Доля, от.ед.",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Зависимость мощности реактора от времени.",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.5,
-        "yMinorTicks": 0.1
+        "yMinorTicks": 0.1,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -40,14 +38,28 @@
       "title": "Реактивность",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -1,
         "yMax": 1,
+        "xLabel": "Время, с",
         "yLabel": "Реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Зависимость реактивности от времени",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -56,14 +68,28 @@
       "title": "Вклад в реактивность. СУЗ",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Вклад в реактивность от СУЗ",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -72,14 +98,28 @@
       "title": "Натриевый плотностной эффект реактивности",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Натриевый плотностной эффект реактивности",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -88,14 +128,28 @@
       "title": "Вклад в реактивность. Температура теплоносителя",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Вклад в реактивность от изменения температуры теплоносителя",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -104,14 +158,28 @@
       "title": "Доплер эффект по температуре топлива",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Доплер эффект по температуре топлива",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -120,14 +188,28 @@
       "title": "Доплер эффект по температуре конструкционных материалов",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Доплер эффект по температуре конструкционных материалов",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -136,14 +218,28 @@
       "title": "Натриевый пустотный эффект",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Натриевый пустотный эффект",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -152,14 +248,28 @@
       "title": "Эффект реактивности из-за плавления топлива",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.1,
         "yMax": 0.1,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Эффект реактивности из-за плавления топлива",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.1,
-        "yMinorTicks": 0.01
+        "yMinorTicks": 0.01,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -168,14 +278,28 @@
       "title": "Эффект реактивности из-за плавления оболочки",
       "HeaderLines": 8,
       "graphParameters": {
+        "userGridX": "No",
+        "userGridY": "No",
+        "axSciFormat": "No",
         "aySciFormat": "Yes",
         "RelativeToStadyState": "No",
+        "xMin": 0,
+        "xMax": 100,
         "yMin": -0.001,
         "yMax": 0.001,
+        "xLabel": "Время, с",
         "yLabel": "Вклад в реактивность",
+        "legend": "EUCLID/V2",
+        "legendPosition": "best",
         "title": "Эффект реактивности из-за плавления оболочки",
+        "xMajorTicks": 5000,
+        "xMinorTicks": 1000,
         "yMajorTicks": 0.001,
-        "yMinorTicks": 0.0001
+        "yMinorTicks": 0.0001,
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     }
   ]

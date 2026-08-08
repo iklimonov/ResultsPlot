@@ -1,54 +1,54 @@
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-dist/
-build/
-target/
-
 # Dependencies
-.venv/
-venv/
 node_modules/
-.julia/
-zig-cache/
-.dep/
-.deps/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+.venv/
 .env
 .env.local
 .env.*
+.envrc
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.tox/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # Editors
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# System files
-.DS_Store
-Thumbs.db
+# Compiled files
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.out
 
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Cache directories
-.mypy_cache/
-.pytest_cache/
-.gradle/
-```
-#Compressed files
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -72,11 +72,3 @@ htmlcov/
 *.tar.xz
 *.tar.zst
 ```
-/PlotResults/FIRSTLOOP
-/PlotResults/GPRKO
-/PlotResults/PGBOX
-/PlotResults/PIT
-/PlotResults/PSK
-/PlotResults/SAOT
-/PlotResults/SECLOOP
-/PlotResults/THIRDLOOP

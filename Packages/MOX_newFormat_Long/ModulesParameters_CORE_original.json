@@ -1,12 +1,4 @@
 {
-  "defaultGraphParameters": {
-    "xAddendum": 0,
-    "aySciFormat": "No",
-    "yMultiplicator": 1,
-    "axSciFormat": "No",
-    "xMin": 0,
-    "xMultiplicator": 1
-  },
   "module": "CORE",
   "title": "Активная зона",
   "outputRule": {
@@ -22,7 +14,10 @@
       "graphParameters": {
         "userGridX": "No",
         "userGridY": "Yes",
+        "axSciFormat": "No",
+        "aySciFormat": "No",
         "RelativeToStadyState": "Yes",
+        "xMin": 0,
         "xMax": 100,
         "yMin": -0.5,
         "yMax": 1.5,
@@ -35,13 +30,10 @@
         "xMinorTicks": 1000,
         "yMajorTicks": 0.5,
         "yMinorTicks": 0.1,
-        "yAddendum": 0,
-        "colorBarLabel": null,
-        "limitMax": null,
-        "colorBarTicks": null,
-        "userLimits": null,
-        "limitMin": null,
-        "colorBarScheme": null
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -52,7 +44,10 @@
       "graphParameters": {
         "userGridX": "No",
         "userGridY": "No",
+        "axSciFormat": "No",
+        "aySciFormat": "No",
         "RelativeToStadyState": "No",
+        "xMin": 0,
         "xMax": 100,
         "yMin": 0,
         "yMax": 10,
@@ -65,13 +60,10 @@
         "xMinorTicks": 1000,
         "yMajorTicks": 0.5,
         "yMinorTicks": 0.1,
-        "yAddendum": 0,
-        "colorBarLabel": null,
-        "limitMax": null,
-        "colorBarTicks": null,
-        "userLimits": null,
-        "limitMin": null,
-        "colorBarScheme": null
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
@@ -82,7 +74,10 @@
       "graphParameters": {
         "userGridX": "Yes",
         "userGridY": "No",
+        "axSciFormat": "No",
+        "aySciFormat": "No",
         "RelativeToStadyState": "No",
+        "xMin": 0,
         "xMax": 4.7,
         "yMin": 0,
         "yMax": 4000,
@@ -95,13 +90,10 @@
         "xMinorTicks": 0.1,
         "yMajorTicks": 100,
         "yMinorTicks": 10,
-        "yAddendum": -273.15,
-        "colorBarLabel": null,
-        "limitMax": null,
-        "colorBarTicks": null,
-        "userLimits": null,
-        "limitMin": null,
-        "colorBarScheme": null
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": -273.15
       }
     },
     {
@@ -112,7 +104,10 @@
       "graphParameters": {
         "userGridX": "Yes",
         "userGridY": "No",
+        "axSciFormat": "No",
+        "aySciFormat": "No",
         "RelativeToStadyState": "No",
+        "xMin": 0,
         "xMax": 4.7,
         "yMin": 0,
         "yMax": 4000,
@@ -125,13 +120,10 @@
         "xMinorTicks": 0.1,
         "yMajorTicks": 100,
         "yMinorTicks": 10,
-        "yAddendum": -273.15,
-        "colorBarLabel": null,
-        "limitMax": null,
-        "colorBarTicks": null,
-        "userLimits": null,
-        "limitMin": null,
-        "colorBarScheme": null
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": -273.15
       }
     },
     {
@@ -142,7 +134,10 @@
       "graphParameters": {
         "userGridX": "Yes",
         "userGridY": "Yes",
+        "axSciFormat": "No",
+        "aySciFormat": "No",
         "RelativeToStadyState": "No",
+        "xMin": 0,
         "xMax": 4.7,
         "yMin": 0,
         "yMax": 1,
@@ -155,43 +150,18 @@
         "xMinorTicks": 0.1,
         "yMajorTicks": 0.1,
         "yMinorTicks": 0.01,
-        "yAddendum": 0,
-        "colorBarLabel": null,
-        "limitMax": null,
-        "colorBarTicks": null,
-        "userLimits": null,
-        "limitMin": null,
-        "colorBarScheme": null
+        "xMultiplicator": 1,
+        "yMultiplicator": 1,
+        "xAddendum": 0,
+        "yAddendum": 0
       }
     },
     {
       "dataType": "MapInTime",
       "name": "AxialCoolantTemperatureFluidInZoneMapInTime",
       "title": "Карта распределения температуры теплоносителя в а.з.",
-      "tvsZoneNames": [
-        "хвост.",
-        "г.п.",
-        "блан.",
-        "ниж.топ.ч.",
-        "акс.просл.",
-        "верх.топ.ч.",
-        "г.п.",
-        "Na",
-        "B4C",
-        "гол."
-      ],
-      "zoneAxialCellCenters": [
-        0.3715,
-        1.19298,
-        1.844015,
-        2.23248,
-        2.52093,
-        2.83983,
-        3.09419,
-        3.33068,
-        3.85567,
-        4.440335
-      ],
+      "tvsZoneNames": [ "хвост.", "г.п.", "блан.", "ниж.топ.ч.", "акс.просл.", "верх.топ.ч.", "г.п.", "Na", "B4C", "гол." ],
+      "zoneAxialCellCenters": [ 0.371500, 1.192980, 1.844015, 2.232480, 2.520930, 2.839830, 3.094190, 3.330680, 3.855670, 4.440335 ],
       "graphParameters": {
         "colorBarScheme": "jet",
         "xLabel": "Индекс гидравлического канала",
@@ -203,48 +173,15 @@
         "colorBarTicks": 50,
         "userLimits": "Yes",
         "limitMin": 400.0,
-        "limitMax": 1000.0,
-        "xMajorTicks": 5000,
-        "yMin": -0.5,
-        "xMinorTicks": 1000,
-        "yAddendum": 0,
-        "userGridY": "Yes",
-        "legend": "EUCLID/V2",
-        "legendPosition": "upper left",
-        "yMax": 1.5,
-        "RelativeToStadyState": "Yes",
-        "userGridX": "No",
-        "xMax": 100
+        "limitMax": 1000.0
       }
     },
     {
       "dataType": "MapInTime",
       "name": "AxialCoolantVoidInZoneMapInTime",
       "title": "Карта распределения паросодержания в а.з.",
-      "tvsZoneNames": [
-        "хвост.",
-        "г.п.",
-        "блан.",
-        "ниж.топ.ч.",
-        "акс.просл.",
-        "верх.топ.ч.",
-        "г.п.",
-        "Na",
-        "B4C",
-        "гол."
-      ],
-      "zoneAxialCellCenters": [
-        0.3715,
-        1.19298,
-        1.844015,
-        2.23248,
-        2.52093,
-        2.83983,
-        3.09419,
-        3.33068,
-        3.85567,
-        4.440335
-      ],
+      "tvsZoneNames": [ "хвост.", "г.п.", "блан.", "ниж.топ.ч.", "акс.просл.", "верх.топ.ч.", "г.п.", "Na", "B4C", "гол." ],
+      "zoneAxialCellCenters": [ 0.371500, 1.192980, 1.844015, 2.232480, 2.520930, 2.839830, 3.094190, 3.330680, 3.855670, 4.440335 ],
       "graphParameters": {
         "colorBarScheme": "jet",
         "xLabel": "Индекс гидравлического канала",
@@ -256,18 +193,7 @@
         "colorBarTicks": 0.1,
         "userLimits": "Yes",
         "limitMin": 0.0,
-        "limitMax": 1.0,
-        "xMajorTicks": 5000,
-        "yMin": -0.5,
-        "xMinorTicks": 1000,
-        "yAddendum": 0,
-        "userGridY": "Yes",
-        "legend": "EUCLID/V2",
-        "legendPosition": "upper left",
-        "yMax": 1.5,
-        "RelativeToStadyState": "Yes",
-        "userGridX": "No",
-        "xMax": 100
+        "limitMax": 1.0
       }
     }
   ]
