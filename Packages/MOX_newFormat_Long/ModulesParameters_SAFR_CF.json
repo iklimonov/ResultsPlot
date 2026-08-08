@@ -1,24 +1,25 @@
 {
   "defaultGraphParameters": {
-    "legendPosition": "upper right",
-    "userGridY": "No",
-    "yMax": 1.2,
-    "xMultiplicator": 1,
-    "RelativeToStadyState": "No",
-    "xMax": 100,
-    "xMajorTicks": 50,
-    "axSciFormat": "No",
-    "yMin": 0,
-    "xLabel": "Время, с",
-    "yMajorTicks": 0.1,
-    "xMinorTicks": 10,
     "userGridX": "No",
-    "legend": "EUCLID/V2",
+    "userGridY": "No",
+    "axSciFormat": "No",
     "aySciFormat": "No",
+    "axScaleFormat": "linear",
+    "ayScaleFormat": "linear",
+    "xMin": 0,
+    "xMax": 100,
+    "yMin": 0.0,
+    "yMax": 1.2,
+    "xLabel": "Время, c",
+    "legendPosition": "best",
+    "xMajorTicks": 5,
+    "xMinorTicks": 1,
+    "yMajorTicks": 0.1,
+    "yMinorTicks": 0.05,
+    "xMultiplicator": 1.0,
     "yMultiplicator": 1,
     "xAddendum": 0,
-    "yMinorTicks": 0.05,
-    "xMin": 0
+    "yAddendum": 0
   },
   "module": "SAFR_CF",
   "title": "Контрольные функции модуля разрушения",
@@ -30,8 +31,7 @@
       "HeaderLines": 6,
       "graphParameters": {
         "yLabel": "Масса, кг",
-        "title": "Зависимость массы от времени в зоне ",
-        "yAddendum": 0
+        "title": "Зависимость массы от времени в зоне "
       }
     },
     {
@@ -41,8 +41,7 @@
       "HeaderLines": 6,
       "graphParameters": {
         "yLabel": "Масса, кг",
-        "title": "Зависимость массы расплава от времени в зоне ",
-        "yAddendum": 0
+        "title": "Зависимость массы расплава от времени в зоне "
       }
     },
     {
@@ -52,8 +51,7 @@
       "HeaderLines": 6,
       "graphParameters": {
         "yLabel": "Масса, кг",
-        "title": "Зависимость массы твёрой фазы от времени в зоне ",
-        "yAddendum": 0
+        "title": "Зависимость массы твёрой фазы от времени в зоне "
       }
     },
     {
@@ -63,8 +61,7 @@
       "HeaderLines": 6,
       "graphParameters": {
         "yLabel": "Масса, кг",
-        "title": "Зависимость массы пара от времени в зоне ",
-        "yAddendum": 0
+        "title": "Зависимость массы пара от времени в зоне "
       }
     },
     {

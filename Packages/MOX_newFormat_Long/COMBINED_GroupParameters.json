@@ -19,28 +19,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе ПГ",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -61,27 +45,11 @@
       ],
       "graphParameters": {
         "userGridX": "Yes",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "linear",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе ПГ",
         "xMajorTicks": 10,
-        "xMinorTicks": 2,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 2
       }
     },
     {
@@ -101,28 +69,17 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
+        "axScaleFormat": "log",
         "yMin": 200,
         "yMax": 800,
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе а.з.",
         "xMajorTicks": 5000,
         "xMinorTicks": 1000,
         "yMajorTicks": 200.0,
-        "yMinorTicks": 30.0,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "yMinorTicks": 30.0
       }
     },
     {
@@ -142,28 +99,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе ПТО. Второй контур",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -184,27 +125,11 @@
       ],
       "graphParameters": {
         "userGridX": "Yes",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "linear",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе ПТО. Второй контур",
         "xMajorTicks": 10,
-        "xMinorTicks": 2,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 2
       }
     },
     {
@@ -224,28 +149,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе ПТО. Первый контур",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -265,28 +174,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе ПТО. Первый контур",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -306,28 +199,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Давление, кПа",
-        "legendPosition": "best",
         "title": "Относительное изменение расхода через ПТО и АТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -347,30 +224,17 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
+        "axScaleFormat": "log",
         "xMax": 40,
         "yMin": -1.2,
-        "yMax": 1.2,
         "xLabel": "Время, с",
         "yLabel": "Доля, от.ед.",
-        "legendPosition": "best",
         "title": "Относительное изменение мощности и расхода теплоносителя через а.з.",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
-    },	
+    },
     {
       "dataType": "time",
       "name": "PumpShutDownProfileFirstLoop",
@@ -388,28 +252,16 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
+        "axScaleFormat": "log",
         "xMax": 40,
         "yMin": -1.2,
         "yMax": 1.6,
         "xLabel": "Время, с",
         "yLabel": "Доля, от.ед.",
-        "legendPosition": "best",
         "title": "Относительное изменение оборотов насоса ГЦН-1 и расхода теплоносителя",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -429,28 +281,16 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
+        "axScaleFormat": "log",
         "xMax": 40,
         "yMin": -1.2,
         "yMax": 1.6,
         "xLabel": "Время, с",
         "yLabel": "Доля, от.ед.",
-        "legendPosition": "best",
         "title": "Относительное изменение оборотов насоса ГЦН-1 и расхода теплоносителя",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -470,28 +310,16 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
+        "axScaleFormat": "log",
         "xMax": 40,
         "yMin": -0.2,
         "yMax": 1.4,
         "xLabel": "Время, с",
         "yLabel": "Доля, от.ед.",
-        "legendPosition": "best",
         "title": "Относительное изменение оборотов насоса ГЦН-2 и расхода теплоносителя",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -511,28 +339,16 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
+        "axScaleFormat": "log",
         "xMax": 40,
         "yMin": -0.2,
         "yMax": 1.4,
         "xLabel": "Время, с",
         "yLabel": "Доля, от.ед.",
-        "legendPosition": "best",
         "title": "Относительное изменение оборотов насоса ГЦН-2 и расхода теплоносителя",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -552,28 +368,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры теплоносителя от времени на входе и выходе из межтрубного пространства АТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -593,28 +393,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры теплоносителя от времени на входе и выходе из трубок АТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -634,28 +418,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры теплоносителя от времени на входе и выходе из трубок ВТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -675,28 +443,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры воздуха от времени на входе и выходе из межтрубного пространства ВТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -716,28 +468,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры теплоносителя от времени на входе и выходе из межтрубного пространства АТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -757,28 +493,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры теплоносителя от времени на входе и выходе из трубок АТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -798,28 +518,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры теплоносителя от времени на входе и выходе из трубок ВТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -839,28 +543,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Зависимость температуры воздуха от времени на входе и выходе из межтрубного пространства ВТО",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -880,28 +568,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на входе и выходе а.з.",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -921,28 +593,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура цилиндрической оболочки",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -962,28 +618,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура питательной воды на входе и выходе ПГ. Третий контур",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -1003,28 +643,12 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
-        "xMax": 100,
-        "yMin": 0,
-        "yMax": 1.2,
+        "axScaleFormat": "log",
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура питательной воды на входе и выходе ПГ. Третий контур",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     },
     {
@@ -1054,29 +678,36 @@
         }
       ],
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
-        "axSciFormat": "No",
-        "aySciFormat": "No",
-      "axScaleFormat": "log",
-      "ayScaleFormat": "linear",
-        "xMin": 0,
+        "axScaleFormat": "log",
         "xMax": 200,
-        "yMin": 0,
-        "yMax": 1.2,
         "xLabel": "Время, с",
         "yLabel": "Температура, °C",
-        "legendPosition": "best",
         "title": "Температура натрия на выходе ПАЗ-Т",
         "xMajorTicks": 5000,
-        "xMinorTicks": 1000,
-        "yMajorTicks": 0.1,
-        "yMinorTicks": 0.05,
-        "xMultiplicator": 1,
-        "yMultiplicator": 1,
-        "xAddendum": 0.0,
-        "yAddendum": 0.0
+        "xMinorTicks": 1000
       }
     }
-  ]
+  ],
+  "defaultGraphParameters": {
+    "userGridX": "No",
+    "userGridY": "No",
+    "axSciFormat": "No",
+    "aySciFormat": "No",
+    "axScaleFormat": "linear",
+    "ayScaleFormat": "linear",
+    "xMin": 0,
+    "xMax": 100,
+    "yMin": 0.0,
+    "yMax": 1.2,
+    "xLabel": "Время, c",
+    "legendPosition": "best",
+    "xMajorTicks": 5,
+    "xMinorTicks": 1,
+    "yMajorTicks": 0.1,
+    "yMinorTicks": 0.05,
+    "xMultiplicator": 1.0,
+    "yMultiplicator": 1,
+    "xAddendum": 0,
+    "yAddendum": 0
+  }
 }
