@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Дашборд результатов расчёта BN1200 - Современный дизайн</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="PlotResults\CalculationParameters.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\ModulesList.js" type="text/javascript" charset="UTF-8"></script>
+    
+    <script src="gui\angular-1.7.9/angular.min.js"></script>
+    <script src="gui\angular-1.7.9/angular-route.js"></script>
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --sidebar-bg: #1a1d2e;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 280px;
+            background: var(--sidebar-bg);
+            color: white;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            background: var(--primary-gradient);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .sidebar-header h4 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        
+        .sidebar-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.8;
+            font-size: 0.875rem;
+        }
+        
+        .nav-section {
+            padding: 1rem 0;
+        }
+        
+        .nav-item-mod {
+            margin: 0.25rem 0.75rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .nav-btn {
+            width: 100%;
+            text-align: left;
+            padding: 0.875rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border: none;
+            color: #e0e0e0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .nav-btn:hover, .nav-btn.active {
+            background: rgba(255,255,255,0.15);
+            color: white;
+        }
+        
+        .nav-btn i {
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-btn.collapsed i {
+            transform: rotate(-90deg);
+        }
+        
+        .submenu {
+            background: rgba(0,0,0,0.2);
+            padding: 0.5rem 0;
+        }
+        
+        .submenu a {
+            display: block;
+            padding: 0.625rem 1rem 0.625rem 2.5rem;
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .submenu a:hover {
+            color: white;
+            background: rgba(255,255,255,0.05);
+            border-left-color: #667eea;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .info-banner {
+            background: var(--primary-gradient);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .info-banner h1 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            margin-right: 0.75rem;
+            margin-top: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Module Cards */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-color: #667eea;
+        }
+        
+        .module-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .module-card h5 {
+            font-weight: 600;
+            color: #1a1d2e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-card p {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+        
+        .subgroup-count {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        
+        /* Pictures Grid */
+        .pictures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .picture-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .picture-card:hover {
+            box-shadow: var(--hover-shadow);
+        }
+        
+        .picture-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .picture-caption {
+            padding: 1rem 1.25rem;
+            background: white;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .picture-caption h6 {
+            font-weight: 600;
+            color: #1a1d2e;
+            margin: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block !important;
+            }
+        }
+        
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+            background: var(--primary-gradient);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body ng-app="dashboardApp" ng-controller="DashboardCtrl">
+
+    <!-- Mobile Toggle Button -->
+    <button class="mobile-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h4><i class="fas fa-chart-line me-2"></i>ЕВКЛИД/V2</h4>
+            <p>Панель результатов</p>
+        </div>
+        
+        <div class="nav-section">
+            <div class="nav-item-mod" ng-repeat="myMod in allModules">
+                <button class="nav-btn collapsed" data-bs-toggle="collapse" 
+                        data-bs-target="#collapse{{$index}}" aria-expanded="false">
+                    <span>{{myMod.title}}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="collapse{{$index}}" class="collapse submenu" data-bs-parent=".nav-section">
+                    <a href="#!/module/{{myMod.name}}">Все результаты</a>
+                    <a ng-repeat="subg in myMod.subgroups" 
+                       href="#!/module/{{myMod.name}}/{{subg.name}}">
+                        {{subg.title}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div ng-view></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="gui/jquery-3.4.1/jquery-3.4.1.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Angular App
+        var app = angular.module('dashboardApp', ['ngRoute']);
+
+        // Controllers
+        app.controller('DashboardCtrl', function($scope, $location) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+        });
+
+        app.controller('HomeCtrl', function($scope) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+        });
+
+        app.controller('ModuleCtrl', function($scope, $routeParams) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+            
+            var moduleName = $routeParams.idModule;
+            for (var i = 0; i < $scope.allModules.length; i++) {
+                if ($scope.allModules[i].name === moduleName) {
+                    $scope.currentModule = $scope.allModules[i];
+                    break;
+                }
+            }
+        });
+
+        app.controller('SubGroupCtrl', function($scope, $routeParams) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+            
+            var moduleName = $routeParams.idModule;
+            var subGroupName = $routeParams.idSubGroup;
+            
+            for (var i = 0; i < $scope.allModules.length; i++) {
+                if ($scope.allModules[i].name === moduleName) {
+                    for (var j = 0; j < $scope.allModules[i].subgroups.length; j++) {
+                        if ($scope.allModules[i].subgroups[j].name === subGroupName) {
+                            $scope.subGroup = $scope.allModules[i].subgroups[j];
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        });
+
+        // Routes
+        app.config(function($routeProvider) {
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'templates/home.html',
+                    controller: 'HomeCtrl'
+                })
+                .when('/module/:idModule', {
+                    templateUrl: 'templates/module.html',
+                    controller: 'ModuleCtrl'
+                })
+                .when('/module/:idModule/:idSubGroup', {
+                    templateUrl: 'templates/subgroup.html',
+                    controller: 'SubGroupCtrl'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
+        });
+
+        // Template loaders
+        var homeTemplate = `
+            <div class="info-banner">
+                <h1><i class="fas fa-atom me-2"></i>Результаты расчёта ЕВКЛИД/V2</h1>
+                <div>
+                    <span class="info-badge"><i class="fas fa-reactor me-1"></i>{{myTask.reactor || 'Не указано'}}</span>
+                    <span class="info-badge"><i class="fas fa-flask me-1"></i>{{myTask.fuelType || 'Не указано'}}</span>
+                    <span class="info-badge"><i class="fas fa-exclamation-triangle me-1"></i>{{myTask.accident || 'Не указано'}}</span>
+                </div>
+            </div>
+            
+            <h3 class="mb-4" style="color: #1a1d2e; font-weight: 600;">
+                <i class="fas fa-folder-open me-2"></i>Модули расчёта
+            </h3>
+            
+            <div class="module-grid">
+                <div class="module-card" ng-repeat="mod in allModules" 
+                     onclick="window.location.href='#!/module/' + mod.name">
+                    <div class="module-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h5>{{mod.title}}</h5>
+                    <p>{{mod.subgroups.length}} групп данных</p>
+                    <span class="subgroup-count">{{mod.subgroups.length}} подгрупп</span>
+                </div>
+            </div>
+        `;
+
+        var moduleTemplate = `
+            <div class="info-banner">
+                <h1><i class="fas fa-chart-line me-2"></i>{{currentModule.title}}</h1>
+                <div>
+                    <span class="info-badge"><i class="fas fa-reactor me-1"></i>{{myTask.reactor || 'Не указано'}}</span>
+                    <span class="info-badge"><i class="fas fa-flask me-1"></i>{{myTask.fuelType || 'Не указано'}}</span>
+                    <span class="info-badge"><i class="fas fa-exclamation-triangle me-1"></i>{{myTask.accident || 'Не указано'}}</span>
+                </div>
+            </div>
+            
+            <a href="#!/" class="btn btn-outline-light mb-4">
+                <i class="fas fa-arrow-left me-2"></i>Назад к модулям
+            </a>
+            
+            <h3 class="mb-4" style="color: #1a1d2e; font-weight: 600;">
+                <i class="fas fa-list me-2"></i>Группы данных
+            </h3>
+            
+            <div class="module-grid">
+                <div class="module-card" ng-repeat="subg in currentModule.subgroups"
+                     onclick="window.location.href='#!/module/' + currentModule.name + '/' + subg.name">
+                    <div class="module-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h5>{{subg.title}}</h5>
+                    <p>{{subg.pictures ? subg.pictures.length : 0}} графиков</p>
+                    <span class="subgroup-count" style="background: #e8f5e9; color: #11998e;">
+                        {{subg.pictures ? subg.pictures.length : 0}} изображений
+                    </span>
+                </div>
+            </div>
+        `;
+
+        var subGroupTemplate = `
+            <div class="info-banner">
+                <h1><i class="fas fa-images me-2"></i>{{subGroup.title}}</h1>
+                <div>
+                    <span class="info-badge"><i class="fas fa-reactor me-1"></i>{{myTask.reactor || 'Не указано'}}</span>
+                    <span class="info-badge"><i class="fas fa-flask me-1"></i>{{myTask.fuelType || 'Не указано'}}</span>
+                    <span class="info-badge"><i class="fas fa-exclamation-triangle me-1"></i>{{myTask.accident || 'Не указано'}}</span>
+                </div>
+            </div>
+            
+            <a href="#!/" class="btn btn-outline-light mb-4">
+                <i class="fas fa-arrow-left me-2"></i>Назад
+            </a>
+            
+            <div class="pictures-grid">
+                <div class="picture-card" ng-repeat="pic in subGroup.pictures">
+                    <img ng-src="{{pic.url}}" alt="{{pic.discription}}">
+                    <div class="picture-caption">
+                        <h6><i class="fas fa-figure me-2"></i>Рисунок {{$index+1}} - {{pic.discription}}</h6>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Load templates dynamically
+        document.write('<script type="text/ng-template" id="templates/home.html">' + homeTemplate + '<\/script>');
+        document.write('<script type="text/ng-template" id="templates/module.html">' + moduleTemplate + '<\/script>');
+        document.write('<script type="text/ng-template" id="templates/subgroup.html">' + subGroupTemplate + '<\/script>');
+    </script>
+</body>
+
+</html>
