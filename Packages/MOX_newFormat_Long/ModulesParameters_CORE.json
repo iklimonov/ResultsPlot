@@ -1,11 +1,25 @@
 {
   "defaultGraphParameters": {
-    "xAddendum": 0,
-    "aySciFormat": "No",
-    "yMultiplicator": 1,
+    "userGridX": "No",
+    "userGridY": "No",
     "axSciFormat": "No",
+    "aySciFormat": "No",
+    "axScaleFormat": "linear",
+    "ayScaleFormat": "linear",
     "xMin": 0,
-    "xMultiplicator": 1
+    "xMax": 100,
+    "yMin": 0.0,
+    "yMax": 1.2,
+    "xLabel": "Время, c",
+    "legendPosition": "best",
+    "xMajorTicks": 5,
+    "xMinorTicks": 1,
+    "yMajorTicks": 0.1,
+    "yMinorTicks": 0.05,
+    "xMultiplicator": 1.0,
+    "yMultiplicator": 1,
+    "xAddendum": 0,
+    "yAddendum": 0
   },
   "module": "CORE",
   "title": "Активная зона",
@@ -20,10 +34,8 @@
       "title": "Расход на входе АЗ",
       "HeaderLines": 8,
       "graphParameters": {
-        "userGridX": "No",
         "userGridY": "Yes",
         "RelativeToStadyState": "Yes",
-        "xMax": 100,
         "yMin": -0.5,
         "yMax": 1.5,
         "xLabel": "Время, с",
@@ -35,7 +47,6 @@
         "xMinorTicks": 1000,
         "yMajorTicks": 0.5,
         "yMinorTicks": 0.1,
-        "yAddendum": 0,
         "colorBarLabel": null,
         "limitMax": null,
         "colorBarTicks": null,
@@ -50,11 +61,7 @@
       "title": "Масса пара",
       "HeaderLines": 8,
       "graphParameters": {
-        "userGridX": "No",
-        "userGridY": "No",
         "RelativeToStadyState": "No",
-        "xMax": 100,
-        "yMin": 0,
         "yMax": 10,
         "xLabel": "Время, с",
         "yLabel": "Масса пара, кг",
@@ -65,7 +72,6 @@
         "xMinorTicks": 1000,
         "yMajorTicks": 0.5,
         "yMinorTicks": 0.1,
-        "yAddendum": 0,
         "colorBarLabel": null,
         "limitMax": null,
         "colorBarTicks": null,
@@ -81,10 +87,8 @@
       "HeaderLines": 8,
       "graphParameters": {
         "userGridX": "Yes",
-        "userGridY": "No",
         "RelativeToStadyState": "No",
         "xMax": 4.7,
-        "yMin": 0,
         "yMax": 4000,
         "xLabel": "Координата, м",
         "yLabel": "Температура, °C",
@@ -111,10 +115,8 @@
       "HeaderLines": 8,
       "graphParameters": {
         "userGridX": "Yes",
-        "userGridY": "No",
         "RelativeToStadyState": "No",
         "xMax": 4.7,
-        "yMin": 0,
         "yMax": 4000,
         "xLabel": "Координата, м",
         "yLabel": "Температура, °C",
@@ -144,7 +146,6 @@
         "userGridY": "Yes",
         "RelativeToStadyState": "No",
         "xMax": 4.7,
-        "yMin": 0,
         "yMax": 1,
         "xLabel": "Координата, м",
         "yLabel": "Доля, отн. ед.",
@@ -153,9 +154,7 @@
         "title": "Распределение доли паросодержания по высоте. Зона ",
         "xMajorTicks": 0.5,
         "xMinorTicks": 0.1,
-        "yMajorTicks": 0.1,
         "yMinorTicks": 0.01,
-        "yAddendum": 0,
         "colorBarLabel": null,
         "limitMax": null,
         "colorBarTicks": null,
@@ -207,14 +206,11 @@
         "xMajorTicks": 5000,
         "yMin": -0.5,
         "xMinorTicks": 1000,
-        "yAddendum": 0,
         "userGridY": "Yes",
         "legend": "EUCLID/V2",
         "legendPosition": "upper left",
         "yMax": 1.5,
-        "RelativeToStadyState": "Yes",
-        "userGridX": "No",
-        "xMax": 100
+        "RelativeToStadyState": "Yes"
       }
     },
     {
@@ -260,14 +256,11 @@
         "xMajorTicks": 5000,
         "yMin": -0.5,
         "xMinorTicks": 1000,
-        "yAddendum": 0,
         "userGridY": "Yes",
         "legend": "EUCLID/V2",
         "legendPosition": "upper left",
         "yMax": 1.5,
-        "RelativeToStadyState": "Yes",
-        "userGridX": "No",
-        "xMax": 100
+        "RelativeToStadyState": "Yes"
       }
     }
   ]
