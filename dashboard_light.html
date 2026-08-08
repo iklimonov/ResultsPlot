@@ -484,8 +484,9 @@
             </h2>
             
             <div class="modules-grid">
-                <div class="module-box" ng-repeat="mod in allModules" 
-                     onclick="window.location.href='#!/module/' + mod.name">
+                <a ng-repeat="mod in allModules" 
+                   ng-href="#!/module/{{mod.name}}"
+                   class="module-box" style="text-decoration: none; color: inherit;">
                     <div class="module-header">
                         <h4>{{mod.title}}</h4>
                         <div class="stats">
@@ -502,7 +503,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="empty-state" ng-if="allModules.length === 0">
@@ -558,8 +559,9 @@
             </h2>
 
             <div class="modules-grid">
-                <div class="module-box" ng-repeat="subg in currentModule.subgroups"
-                     onclick="window.location.href='#!/module/' + currentModule.name + '/' + subg.name">
+                <a ng-repeat="subg in currentModule.subgroups"
+                   ng-href="#!/module/{{currentModule.name}}/{{subg.name}}"
+                   class="module-box" style="text-decoration: none; color: inherit;">
                     <div class="module-header" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
                         <h4>{{subg.title}}</h4>
                         <div class="stats">
@@ -571,7 +573,7 @@
                             Нажмите для просмотра всех изображений группы
                         </p>
                     </div>
-                </div>
+                </a>
             </div>
         `;
 
@@ -639,9 +641,9 @@
         `;
 
         // Load templates
-        document.write('<script type="text/ng-template" id="home.html">' + homeTemplate + '<\/script>');
-        document.write('<script type="text/ng-template" id="module.html">' + moduleTemplate + '<\/script>');
-        document.write('<script type="text/ng-template" id="subgroup.html">' + subGroupTemplate + '<\/script>');
+        document.write('<script type="text/ng-template" id="home.html">' + homeTemplate + '</' + 'script>');
+        document.write('<script type="text/ng-template" id="module.html">' + moduleTemplate + '</' + 'script>');
+        document.write('<script type="text/ng-template" id="subgroup.html">' + subGroupTemplate + '</' + 'script>');
     </script>
 </body>
 
