@@ -1,19 +1,4 @@
 {
-  "defaultGraphParameters": {
-    "xMultiplicator": 1.0,
-    "axScaleFormat": "log",
-    "RelativeToStadyState": "No",
-    "xMax": 100,
-    "xMajorTicks": 1,
-    "axSciFormat": "No",
-    "xLabel": "Время, с",
-    "xMinorTicks": 0.5,
-    "userGridX": "No",
-    "legend": "EUCLID/V2",
-    "xAddendum": 0,
-    "yAddendum": 0,
-    "xMin": 0
-  },
   "module": "AEROSOL",
   "title": "Аэрозольный модуль",
   "totalDataList": [
@@ -65,6 +50,7 @@
       "name": "massInFilter",
       "title": "Осаждение на фильтре."
     }
+
   ],
   "ControlVolumeMass": {
     "dataType": "time",
@@ -73,17 +59,30 @@
     "title": "Масса",
     "HeaderLines": 8,
     "graphParameters": {
+      "userGridX": "No",
       "userGridY": "No",
+      "axSciFormat": "No",
       "aySciFormat": "Yes",
+      "axScaleFormat": "log",
       "ayScaleFormat": "log",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
       "yMin": 0,
       "yMax": 5.0,
+      "xLabel": "Время, с",
       "yLabel": "Масса, г",
+      "legend": "EUCLID/V2",
       "legendPosition": "upper left",
       "title": "Зависимость массы ПД от времени.",
+      "xMajorTicks": 1,
+      "xMinorTicks": 0.5,
       "yMajorTicks": 0.5,
       "yMinorTicks": 0.1,
-      "yMultiplicator": 1000
+      "xMultiplicator": 1.0,
+      "yMultiplicator": 1000,
+      "xAddendum": 0,
+      "yAddendum": 0
     }
   },
   "ControlVolumeActivity": {
@@ -93,17 +92,30 @@
     "title": "Активность",
     "HeaderLines": 8,
     "graphParameters": {
+      "userGridX": "No",
       "userGridY": "Yes",
+      "axSciFormat": "No",
       "aySciFormat": "No",
+      "axScaleFormat": "log",
       "ayScaleFormat": "log",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
       "yMin": 1,
-      "yMax": 1000000000000000.0,
+      "yMax": 1.0e+15,
+      "xLabel": "Время, с",
       "yLabel": "Активность, Бк",
+      "legend": "EUCLID/V2",
       "legendPosition": "best",
       "title": "Зависимость активности ПД от времени.",
+      "xMajorTicks": 1,
+      "xMinorTicks": 0.5,
       "yMajorTicks": 0.5,
       "yMinorTicks": 0.1,
-      "yMultiplicator": 1.0
+      "xMultiplicator": 1.0,
+      "yMultiplicator": 1.0,
+      "xAddendum": 0,
+      "yAddendum": 0
     }
   },
   "TotalDataMass": {
@@ -113,17 +125,30 @@
     "title": "Масса.",
     "HeaderLines": 8,
     "graphParameters": {
+      "userGridX": "No",
       "userGridY": "No",
+      "axSciFormat": "No",
       "aySciFormat": "Yes",
+      "axScaleFormat": "log",
       "ayScaleFormat": "linear",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
       "yMin": 0,
       "yMax": 5.0,
+      "xLabel": "Время, с",
       "yLabel": "Масса, кг",
+      "legend": "EUCLID/V2",
       "legendPosition": "upper left",
       "title": "Зависимость массы ПД от времени.",
+      "xMajorTicks": 1,
+      "xMinorTicks": 0.5,
       "yMajorTicks": 0.5,
       "yMinorTicks": 0.1,
-      "yMultiplicator": 1.0
+      "xMultiplicator": 1.0,
+      "yMultiplicator": 1.0,
+      "xAddendum": 0,
+      "yAddendum": 0
     }
   },
   "TotalDataActivity": {
@@ -133,17 +158,30 @@
     "title": "Активность.",
     "HeaderLines": 8,
     "graphParameters": {
+      "userGridX": "No",
       "userGridY": "Yes",
+      "axSciFormat": "No",
       "aySciFormat": "No",
+      "axScaleFormat": "log",
       "ayScaleFormat": "log",
+      "RelativeToStadyState": "No",
+      "xMin": 0,
+      "xMax": 100,
       "yMin": 1,
-      "yMax": 1000000000000000.0,
+      "yMax": 1.0e+15,
+      "xLabel": "Время, с",
       "yLabel": "Активность, Бк",
+      "legend": "EUCLID/V2",
       "legendPosition": "best",
       "title": "Зависимость активности ПД от времени.",
-      "yMajorTicks": 100000000000000.0,
-      "yMinorTicks": 1000000000000.0,
-      "yMultiplicator": 1.0
+      "xMajorTicks": 1,
+      "xMinorTicks": 0.5,
+      "yMajorTicks": 1.0e+14,
+      "yMinorTicks": 1.0e+12,
+      "xMultiplicator": 1.0,
+      "yMultiplicator": 1.0,
+      "xAddendum": 0,
+      "yAddendum": 0
     }
   }
 }

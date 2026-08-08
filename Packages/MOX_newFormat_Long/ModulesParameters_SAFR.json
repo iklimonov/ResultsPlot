@@ -66,98 +66,406 @@
       "dataType": "map",
       "name": "LiquidMap",
       "graphParameters": {
-        "title": "Распределение расплава в зоне "
+        "title": "Распределение расплава в зоне ",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "map",
       "name": "TemperatureMap",
       "graphParameters": {
-        "title": "Распределение температуры в зоне "
+        "title": "Распределение температуры в зоне ",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "LiquidMass",
       "graphParameters": {
-        "title": "Масса расплава в твэле от времени. Зона "
+        "title": "Масса расплава в твэле от времени. Зона ",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "SolidMass",
       "graphParameters": {
-        "title": "Масса материала в твёрдой фазе в твэле от времени. Зона "
+        "title": "Масса материала в твёрдой фазе в твэле от времени. Зона ",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "TotalMass",
       "graphParameters": {
-        "title": "Масса материала в твэле от времени. Зона "
+        "title": "Масса материала в твэле от времени. Зона ",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "MaxTemperature",
       "graphParameters": {
-        "title": "Максимальная температура топлива в твэле от времени. Зона "
+        "title": "Максимальная температура топлива в твэле от времени. Зона ",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "FullLiquidMassCore",
       "graphParameters": {
-        "title": "Масса расплава в а.з. от времени."
+        "title": "Масса расплава в а.з. от времени.",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "FullSolidMassCore",
       "graphParameters": {
-        "title": "Масса материала в твёрдой фазе в а.з. от времени."
+        "title": "Масса материала в твёрдой фазе в а.з. от времени.",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "FullMassCore",
       "graphParameters": {
-        "title": "Масса материала в в а.з. от времени."
+        "title": "Масса материала в в а.з. от времени.",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "FullDissociationMass",
       "graphParameters": {
-        "title": "Изменение массы материалов при диссоциации"
+        "title": "Изменение массы материалов при диссоциации",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "DissociationMassUPuN",
       "graphParameters": {
-        "title": "Диссоциации.СНУП топливо"
+        "title": "Диссоциации.СНУП топливо",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "DissociationMassDinitrogen",
       "graphParameters": {
-        "title": "Диссоциации. Динитроген"
+        "title": "Диссоциации. Динитроген",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "DissociationMassPlutonium",
       "graphParameters": {
-        "title": "Диссоциации. Плутоний"
+        "title": "Диссоциации. Плутоний",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     },
     {
       "dataType": "time",
       "name": "DissociationMassUranium",
       "graphParameters": {
-        "title": "Диссоциации. Уран"
+        "title": "Диссоциации. Уран",
+        "xMajorTicks": null,
+        "xLabel": null,
+        "aySciFormat": null,
+        "yMin": null,
+        "yMajorTicks": null,
+        "yMultiplicator": null,
+        "xMin": null,
+        "yLabel": null,
+        "xMinorTicks": null,
+        "yAddendum": null,
+        "axSciFormat": null,
+        "userGridY": null,
+        "xMultiplicator": null,
+        "legend": null,
+        "legendPosition": null,
+        "yMinorTicks": null,
+        "yMax": null,
+        "RelativeToStadyState": null,
+        "criteriaForAxSciFormat": null,
+        "userGridX": null,
+        "xAddendum": null,
+        "xMax": null
       }
     }
   ],
@@ -166,7 +474,29 @@
     "name": "LiquidMap",
     "title": "Карта расплава",
     "graphParameters": {
-      "title": "Распределение расплава"
+      "title": "Распределение расплава",
+      "xMajorTicks": null,
+      "xLabel": null,
+      "aySciFormat": null,
+      "yMin": null,
+      "yMajorTicks": null,
+      "yMultiplicator": null,
+      "xMin": null,
+      "yLabel": null,
+      "xMinorTicks": null,
+      "yAddendum": null,
+      "axSciFormat": null,
+      "userGridY": null,
+      "xMultiplicator": null,
+      "legend": null,
+      "legendPosition": null,
+      "yMinorTicks": null,
+      "yMax": null,
+      "RelativeToStadyState": null,
+      "criteriaForAxSciFormat": null,
+      "userGridX": null,
+      "xAddendum": null,
+      "xMax": null
     }
   },
   "temperatureMap": {
@@ -174,7 +504,29 @@
     "name": "TemperatureMap",
     "title": "Карта температур",
     "graphParameters": {
-      "title": "Распределение температуры"
+      "title": "Распределение температуры",
+      "xMajorTicks": null,
+      "xLabel": null,
+      "aySciFormat": null,
+      "yMin": null,
+      "yMajorTicks": null,
+      "yMultiplicator": null,
+      "xMin": null,
+      "yLabel": null,
+      "xMinorTicks": null,
+      "yAddendum": null,
+      "axSciFormat": null,
+      "userGridY": null,
+      "xMultiplicator": null,
+      "legend": null,
+      "legendPosition": null,
+      "yMinorTicks": null,
+      "yMax": null,
+      "RelativeToStadyState": null,
+      "criteriaForAxSciFormat": null,
+      "userGridX": null,
+      "xAddendum": null,
+      "xMax": null
     }
   },
   "liquidMass": {
@@ -204,7 +556,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 1,
       "xAddendum": 0,
-      "yAddendum": 0
+      "yAddendum": 0,
+      "criteriaForAxSciFormat": null
     }
   },
   "solidMass": {
@@ -234,7 +587,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 1,
       "xAddendum": 0,
-      "yAddendum": 0
+      "yAddendum": 0,
+      "criteriaForAxSciFormat": null
     }
   },
   "totalMass": {
@@ -264,7 +618,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 1,
       "xAddendum": 0,
-      "yAddendum": 0
+      "yAddendum": 0,
+      "criteriaForAxSciFormat": null
     }
   },
   "maxTemperature": {
@@ -294,7 +649,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 1,
       "xAddendum": 0,
-      "yAddendum": -273.15
+      "yAddendum": -273.15,
+      "criteriaForAxSciFormat": null
     }
   },
   "fullLiquidMassCore": {
@@ -324,7 +680,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 0.001,
       "xAddendum": 0,
-      "yAddendum": 0
+      "yAddendum": 0,
+      "criteriaForAxSciFormat": null
     }
   },
   "fullSolidMassCore": {
@@ -354,7 +711,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 1.0,
       "xAddendum": 0,
-      "yAddendum": 0
+      "yAddendum": 0,
+      "criteriaForAxSciFormat": null
     }
   },
   "fullMassCore": {
@@ -384,7 +742,8 @@
       "xMultiplicator": 1,
       "yMultiplicator": 1.0,
       "xAddendum": 0,
-      "yAddendum": 0
+      "yAddendum": 0,
+      "criteriaForAxSciFormat": null
     }
   },
   "DissociationMassUPuN": {

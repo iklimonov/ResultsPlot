@@ -32,6 +32,17 @@ def openJSON(file_name, folderWithPlotParameters):
     with codecs.open("Packages\\" + path_to_folder + file_name + ".json", "r", "utf-8") as read_file:
         jsonData = json.load(read_file)
         read_file.close()
+        
+        # Применяем параметры по умолчанию ко всем графикам
+        if "defaultGraphParameters" in jsonData and "data" in jsonData:
+            defaultParams = jsonData["defaultGraphParameters"]
+            for graphData in jsonData["data"]:
+                if "graphParameters" not in graphData:
+                    graphData["graphParameters"] = {}
+                # Объединяем параметры: индивидуальные заменяют параметры по умолчанию
+                mergedParams = {**defaultParams, **graphData["graphParameters"]}
+                graphData["graphParameters"] = mergedParams
+        
         return jsonData
 
 
