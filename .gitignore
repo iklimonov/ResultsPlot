@@ -70,3 +70,11 @@ htmlcov/
 *.tar.xz
 *.tar.zst
 ```
+/PlotResults/FIRSTLOOP
+/PlotResults/GPRKO
+/PlotResults/PGBOX
+/PlotResults/PIT
+/PlotResults/PSK
+/PlotResults/SAOT
+/PlotResults/SECLOOP
+/PlotResults/THIRDLOOP
