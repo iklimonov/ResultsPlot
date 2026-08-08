@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Дашборд результатов - Тёмная тема</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="PlotResults\CalculationParameters.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PlotResults\ModulesList.js" type="text/javascript" charset="UTF-8"></script>
+    
+    <script src="gui\angular-1.7.9/angular.min.js"></script>
+    <script src="gui\angular-1.7.9/angular-route.js"></script>
+
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --border-color: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-purple: #a371f7;
+            --accent-orange: #db6d28;
+            --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .sidebar-brand {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .brand-text h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .brand-text span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .nav-tree {
+            padding: 1rem 0;
+        }
+        
+        .nav-item {
+            margin: 0.25rem 0.5rem;
+        }
+        
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        
+        .nav-header:hover {
+            border-color: var(--accent-blue);
+            background: rgba(88, 166, 255, 0.1);
+        }
+        
+        .nav-header .title {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        
+        .nav-header i {
+            transition: transform 0.3s ease;
+            color: var(--text-secondary);
+        }
+        
+        .nav-header.collapsed i {
+            transform: rotate(-90deg);
+        }
+        
+        .sub-nav {
+            padding: 0.5rem 0;
+            margin-left: 1rem;
+        }
+        
+        .sub-nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            border-radius: 6px;
+            margin: 0.25rem 0.5rem;
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+        }
+        
+        .sub-nav a:hover {
+            color: var(--text-primary);
+            background: var(--bg-tertiary);
+            border-left-color: var(--accent-blue);
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 300px;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        /* Stats Banner */
+        .stats-banner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: var(--card-shadow);
+        }
+        
+        .stat-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .stat-icon.reactor {
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--accent-blue);
+        }
+        
+        .stat-icon.fuel {
+            background: rgba(163, 113, 247, 0.15);
+            color: var(--accent-purple);
+        }
+        
+        .stat-icon.accident {
+            background: rgba(219, 109, 40, 0.15);
+            color: var(--accent-orange);
+        }
+        
+        .stat-info h4 {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin: 0 0 0.25rem 0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-info p {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        /* Section Header */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .section-header h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .section-header i {
+            color: var(--accent-blue);
+        }
+        
+        /* Modules Grid */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .module-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .module-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: var(--card-shadow);
+            transform: translateY(-3px);
+        }
+        
+        .module-card-header {
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .module-card-header h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .module-card-header h4 i {
+            color: var(--accent-blue);
+        }
+        
+        .module-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .module-stats span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .module-body {
+            padding: 1.25rem;
+        }
+        
+        .subgroup-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .subgroup-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .subgroup-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 0.75rem;
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: all 0.2s ease;
+        }
+        
+        .subgroup-links a:hover {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-blue);
+        }
+        
+        .subgroup-links a i {
+            font-size: 0.625rem;
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+        
+        .gallery-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: var(--card-shadow);
+        }
+        
+        .gallery-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .gallery-info {
+            padding: 1rem 1.25rem;
+        }
+        
+        .figure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--accent-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-info p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Navigation */
+        .nav-path {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .nav-path a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-path a:hover {
+            color: var(--text-primary);
+        }
+        
+        .nav-path .separator {
+            color: var(--text-secondary);
+        }
+        
+        .nav-path .current {
+            color: var(--text-secondary);
+        }
+        
+        /* Button */
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-back:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block !important;
+            }
+        }
+        
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body ng-app="darkDashboardApp" ng-controller="MainCtrl">
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="brand-text">
+                <h2>ЕВКЛИД/V2</h2>
+                <span>Dashboard v2.0</span>
+            </div>
+        </div>
+        
+        <nav class="nav-tree">
+            <div class="nav-item" ng-repeat="mod in allModules">
+                <div class="nav-header collapsed" data-bs-toggle="collapse" 
+                     data-bs-target="#nav{{$index}}" aria-expanded="false">
+                    <span class="title">{{mod.title}}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div id="nav{{$index}}" class="collapse sub-nav" data-bs-parent=".nav-tree">
+                    <a href="#!/module/{{mod.name}}">
+                        <i class="fas fa-circle me-2"></i>Все результаты
+                    </a>
+                    <a ng-repeat="subg in mod.subgroups" 
+                       href="#!/module/{{mod.name}}/{{subg.name}}">
+                        <i class="fas fa-circle me-2"></i>{{subg.title}}
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div ng-view></div>
+    </main>
+
+    <!-- jQuery -->
+    <script src="gui/jquery-3.4.1/jquery-3.4.1.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        var app = angular.module('darkDashboardApp', ['ngRoute']);
+
+        app.controller('MainCtrl', function($scope) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+        });
+
+        app.controller('HomeCtrl', function($scope) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+        });
+
+        app.controller('ModuleCtrl', function($scope, $routeParams) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+            
+            for (var i = 0; i < $scope.allModules.length; i++) {
+                if ($scope.allModules[i].name === $routeParams.idModule) {
+                    $scope.module = $scope.allModules[i];
+                    break;
+                }
+            }
+        });
+
+        app.controller('SubGroupCtrl', function($scope, $routeParams) {
+            $scope.myTask = typeof CalcParametersData !== 'undefined' ? CalcParametersData : {};
+            $scope.allModules = typeof myModules !== 'undefined' ? myModules : [];
+            
+            for (var i = 0; i < $scope.allModules.length; i++) {
+                if ($scope.allModules[i].name === $routeParams.idModule) {
+                    for (var j = 0; j < $scope.allModules[i].subgroups.length; j++) {
+                        if ($scope.allModules[i].subgroups[j].name === $routeParams.idSubGroup) {
+                            $scope.subGroup = $scope.allModules[i].subgroups[j];
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        });
+
+        app.config(function($routeProvider) {
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'home.html',
+                    controller: 'HomeCtrl'
+                })
+                .when('/module/:idModule', {
+                    templateUrl: 'module.html',
+                    controller: 'ModuleCtrl'
+                })
+                .when('/module/:idModule/:idSubGroup', {
+                    templateUrl: 'subgroup.html',
+                    controller: 'SubGroupCtrl'
+                })
+                .otherwise({ redirectTo: '/' });
+        });
+
+        // Templates
+        var homeTemplate = `
+            <div class="stats-banner">
+                <div class="stat-card">
+                    <div class="stat-icon reactor">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Реактор</h4>
+                        <p>{{myTask.reactor || '—'}}</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon fuel">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Тип топлива</h4>
+                        <p>{{myTask.fuelType || '—'}}</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon accident">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Сценарий аварии</h4>
+                        <p>{{myTask.accident || '—'}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <i class="fas fa-layer-group"></i>
+                <h3>Модули расчёта</h3>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module-card" ng-repeat="mod in allModules"
+                     onclick="window.location.href='#!/module/' + mod.name">
+                    <div class="module-card-header">
+                        <h4><i class="fas fa-box"></i> {{mod.title}}</h4>
+                        <div class="module-stats">
+                            <span><i class="fas fa-folder"></i> {{mod.subgroups.length}} групп</span>
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <ul class="subgroup-links">
+                            <li ng-repeat="subg in mod.subgroups">
+                                <a href="#!/module/{{mod.name}}/{{subg.name}}" 
+                                   onclick="event.stopPropagation()">
+                                    <i class="fas fa-caret-right"></i>
+                                    {{subg.title}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        var moduleTemplate = `
+            <nav class="nav-path">
+                <a href="#!/"><i class="fas fa-home"></i></a>
+                <span class="separator">/</span>
+                <span class="current">{{module.title}}</span>
+            </nav>
+
+            <div class="stats-banner">
+                <div class="stat-card">
+                    <div class="stat-icon reactor">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Реактор</h4>
+                        <p>{{myTask.reactor || '—'}}</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon fuel">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Тип топлива</h4>
+                        <p>{{myTask.fuelType || '—'}}</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon accident">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Авария</h4>
+                        <p>{{myTask.accident || '—'}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#!/" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Назад
+            </a>
+
+            <div class="section-header">
+                <i class="fas fa-chart-bar"></i>
+                <h3>{{module.title}}</h3>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module-card" ng-repeat="subg in module.subgroups"
+                     onclick="window.location.href='#!/module/' + module.name + '/' + subg.name">
+                    <div class="module-card-header" style="background: linear-gradient(135deg, rgba(63,185,80,0.2), var(--bg-tertiary));">
+                        <h4><i class="fas fa-image" style="color: var(--accent-green);"></i> {{subg.title}}</h4>
+                        <div class="module-stats">
+                            <span><i class="fas fa-photo-film"></i> {{subg.pictures ? subg.pictures.length : 0}} графиков</span>
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.8125rem;">
+                            Нажмите для просмотра группы
+                        </p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        var subGroupTemplate = `
+            <nav class="nav-path">
+                <a href="#!/"><i class="fas fa-home"></i></a>
+                <span class="separator">/</span>
+                <a href="#!/module/{{allModules[0].name}}">Модули</a>
+                <span class="separator">/</span>
+                <span class="current">{{subGroup.title}}</span>
+            </nav>
+
+            <a href="#!/" class="btn-back">
+                <i class="fas fa-arrow-left"></i> На главную
+            </a>
+
+            <div class="stats-banner">
+                <div class="stat-card">
+                    <div class="stat-icon reactor">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Реактор</h4>
+                        <p>{{myTask.reactor || '—'}}</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon fuel">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Топливо</h4>
+                        <p>{{myTask.fuelType || '—'}}</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon accident">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Авария</h4>
+                        <p>{{myTask.accident || '—'}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <i class="fas fa-images"></i>
+                <h3>{{subGroup.title}}</h3>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card" ng-repeat="pic in subGroup.pictures">
+                    <img ng-src="{{pic.url}}" alt="{{pic.discription}}">
+                    <div class="gallery-info">
+                        <span class="figure-badge">
+                            <i class="fas fa-hashtag"></i> {{$index+1}}
+                        </span>
+                        <p>{{pic.discription}}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.write('<script type="text/ng-template" id="home.html">' + homeTemplate + '<\\/script>');
+        document.write('<script type="text/ng-template" id="module.html">' + moduleTemplate + '<\\/script>');
+        document.write('<script type="text/ng-template" id="subgroup.html">' + subGroupTemplate + '<\\/script>');
+    </script>
+</body>
+
+</html>
