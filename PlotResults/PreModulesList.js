@@ -17,4 +17,6 @@ loadScript('PlotResults/THIRDLOOP.js');
 loadScript('PlotResults/SAOT.js');
 loadScript('PlotResults/REACTORSIGNALS.js');
 loadScript('PlotResults/COMMONFILES.js');
+loadScript('PlotResults/COMBINED.js');
+loadScript('PlotResults/AEROSOL.js');
 

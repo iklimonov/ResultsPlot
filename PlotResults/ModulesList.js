@@ -60,3 +60,15 @@ if (typeof myCOMMONFILES != 'undefined' ) {
     myModules.push(COMMONFILES_data);
 }
 
+var COMBINED_data = [];
+if (typeof myCOMBINED != 'undefined' ) {
+    COMBINED_data = JSON.parse(myCOMBINED);
+    myModules.push(COMBINED_data);
+}
+
+var AEROSOL_data = [];
+if (typeof myAEROSOL != 'undefined' ) {
+    AEROSOL_data = JSON.parse(myAEROSOL);
+    myModules.push(AEROSOL_data);
+}
+
